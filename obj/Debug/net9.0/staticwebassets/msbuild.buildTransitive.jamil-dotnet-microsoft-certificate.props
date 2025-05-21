@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/jamil-dotnet-microsoft-certificate.props" />
+</Project>
