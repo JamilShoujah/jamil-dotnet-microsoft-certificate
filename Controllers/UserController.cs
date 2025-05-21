@@ -21,11 +21,11 @@ namespace JamilDotnetMicrosoftCertificate.Controllers
             Ok(await _db.Users.ToListAsync());
 
         // GET: api/users/{id}
-        [HttpGet("{id:guid}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
             var user = await _db.Users.FindAsync(id);
-            if (user is null) return NotFound();
+            if (user == null) return NotFound();
             return Ok(user);
         }
 
@@ -33,43 +33,35 @@ namespace JamilDotnetMicrosoftCertificate.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] User user)
         {
-            if (!ModelState.IsValid) 
-                return BadRequest(ModelState);
-
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             _db.Users.Add(user);
             await _db.SaveChangesAsync();
             return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
         }
 
         // PUT: api/users/{id}
-        [HttpPut("{id:guid}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] User updated)
         {
-            if (id != updated.Id) 
-                return BadRequest("ID mismatch");
+            if (id != updated.Id) return BadRequest();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            if (!ModelState.IsValid) 
-                return BadRequest(ModelState);
+            var user = await _db.Users.FindAsync(id);
+            if (user == null) return NotFound();
 
-            var existing = await _db.Users.FindAsync(id);
-            if (existing is null) 
-                return NotFound();
-
-            existing.Name  = updated.Name;
-            existing.Email = updated.Email;
-            existing.Age   = updated.Age;
+            user.Name = updated.Name;
+            user.Email = updated.Email;
+            user.Age = updated.Age;
             await _db.SaveChangesAsync();
-
             return NoContent();
         }
 
         // DELETE: api/users/{id}
-        [HttpDelete("{id:guid}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var user = await _db.Users.FindAsync(id);
-            if (user is null) 
-                return NotFound();
+            if (user == null) return NotFound();
 
             _db.Users.Remove(user);
             await _db.SaveChangesAsync();
