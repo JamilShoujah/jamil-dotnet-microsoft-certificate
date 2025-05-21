@@ -1,8 +1,111 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome to the User Management API";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div style="font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; line-height: 1.6;">
+    <h1>User Management API</h1>
+    <p>
+        This project is a <strong>RESTful .NET 7 Web API</strong> for managing users with full CRUD functionality.
+        It uses an <em>in-memory database</em> for quick prototyping and includes Swagger UI for easy API exploration.
+    </p>
+
+    <h2>🚀 Getting Started</h2>
+    <ul>
+        <li>Use <a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">Postman</a> or any REST client to test the API endpoints.</li>
+        <li>The app runs locally at <code>https://localhost:5176</code> by default.</li>
+        <li>Swagger UI is available at <a href="/swagger" target="_blank" rel="noopener noreferrer">/swagger</a> for interactive API documentation.</li>
+    </ul>
+
+    <h2>📋 API Endpoints Overview</h2>
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+        <thead style="background-color: #007bff; color: white;">
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>GET</td><td>/api/users</td><td>Retrieve all users</td></tr>
+            <tr><td>GET</td><td>/api/users/{id}</td><td>Retrieve a single user by GUID</td></tr>
+            <tr><td>POST</td><td>/api/users</td><td>Create a new user</td></tr>
+            <tr><td>PUT</td><td>/api/users/{id}</td><td>Update an existing user</td></tr>
+            <tr><td>DELETE</td><td>/api/users/{id}</td><td>Delete a user</td></tr>
+        </tbody>
+    </table>
+
+    <h2>📝 User Model Sample</h2>
+    <pre style="background: #f8f9fa; padding: 15px; border-radius: 6px; overflow-x: auto;">
+{
+  "id": "generated-by-server-guid",
+  "name": "Alice Smith",
+  "email": "alice.smith@example.com",
+  "age": 28,
+  "phoneNumber": "+123456789",
+  "role": "User"
+}
+    </pre>
+
+    <h2>🔧 Example Requests</h2>
+
+    <h3>1. Create a User</h3>
+    <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;">
+POST https://localhost:5176/api/users
+Content-Type: application/json
+
+{
+  "name": "Alice Smith",
+  "email": "alice.smith@example.com",
+  "age": 28,
+  "phoneNumber": "+123456789",
+  "role": "User"
+}
+    </pre>
+
+    <h3>2. Get All Users</h3>
+    <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;">
+GET https://localhost:5176/api/users
+    </pre>
+
+    <h3>3. Get a User by ID</h3>
+    <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;">
+GET https://localhost:5176/api/users/{user-id-guid}
+    </pre>
+
+    <h3>4. Update an Existing User</h3>
+    <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;">
+PUT https://localhost:5176/api/users/{user-id-guid}
+Content-Type: application/json
+
+{
+  "id": "user-id-guid",
+  "name": "Alice S. Updated",
+  "email": "alice.updated@example.com",
+  "age": 29,
+  "phoneNumber": "+123456789",
+  "role": "User"
+}
+    </pre>
+
+    <h3>5. Delete a User</h3>
+    <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;">
+DELETE https://localhost:5176/api/users/{user-id-guid}
+    </pre>
+
+    <h2>🔗 Swagger UI</h2>
+    <p>
+        For an interactive way to explore and test all API endpoints, visit 
+        <a href="/swagger" target="_blank" rel="noopener noreferrer">/swagger</a>.
+    </p>
+
+    <hr />
+
+    <p>
+        <strong>Note:</strong> This API uses an in-memory database, so all data will be reset on app restart. 
+        For production, replace it with a persistent database.
+    </p>
+
+    <p>
+        For detailed documentation, check the <a href="https://github.com/yourusername/UserManagementAPI" target="_blank" rel="noopener noreferrer">GitHub repository README</a>.
+    </p>
 </div>

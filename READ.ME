@@ -1,0 +1,169 @@
+# User Management API
+
+A simple **.NET 7 Web API** to manage users with CRUD operations.
+Uses **Entity Framework Core In-Memory Database** for demonstration purposes.
+Includes Swagger UI for API exploration and testing.
+
+---
+
+## Table of Contents
+
+- Features
+- Prerequisites
+- Getting Started
+- Running the Application
+- API Endpoints
+- Testing with Postman
+- Seeding Data
+- Customization
+- Notes
+- License
+
+---
+
+## Features
+
+- RESTful API for managing users (Create, Read, Update, Delete)
+- In-memory database for quick prototyping
+- Basic validation on user data
+- Swagger/OpenAPI support for interactive API docs
+- Middleware pipeline with error handling and logging
+- Data protection key persistence (for demo)
+
+---
+
+## Prerequisites
+
+- .NET 7 SDK installed (https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- Postman (recommended) or similar REST client for testing
+- (Optional) Visual Studio or VS Code for code editing and debugging
+
+---
+
+## Getting Started
+
+1. Clone the repository:
+
+   git clone https://github.com/yourusername/UserManagementAPI.git
+   cd UserManagementAPI
+
+2. Restore dependencies:
+
+   dotnet restore
+
+3. Build the project:
+
+   dotnet build
+
+---
+
+## Running the Application
+
+Run the app locally with:
+
+   dotnet run
+
+By default, it will listen on:
+
+   https://localhost:5176
+
+---
+
+## API Endpoints
+
+| Method | URL               | Description              |
+|--------|-------------------|--------------------------|
+| GET    | /api/users        | Get all users            |
+| GET    | /api/users/{id}   | Get a user by GUID       |
+| POST   | /api/users        | Create a new user        |
+| PUT    | /api/users/{id}   | Update an existing user  |
+| DELETE | /api/users/{id}   | Delete a user            |
+
+---
+
+## User Model Properties
+
+| Property    | Type   | Required | Notes                    |
+|-------------|--------|----------|--------------------------|
+| Id          | GUID   | Yes      | Unique identifier        |
+| Name        | string | Yes      | Full name of the user    |
+| Email       | string | Yes      | Valid email address      |
+| Age         | int    | Optional | User's age               |
+| PhoneNumber | string | Yes      | User phone number        |
+| Role        | string | Yes      | User role (e.g., Admin)  |
+
+---
+
+## Testing with Postman
+
+**Postman is recommended for testing the API endpoints.** It allows you to easily create HTTP requests with JSON payloads and inspect responses.
+
+### Get all users
+
+- Method: GET  
+- URL: https://localhost:5176/api/users
+
+---
+
+### Add a new user
+
+- Method: POST  
+- URL: https://localhost:5176/api/users  
+- Headers: Content-Type: application/json  
+- Body (raw JSON):
+
+{
+  "name": "Alice Smith",
+  "email": "alice.smith@example.com",
+  "age": 28,
+  "phoneNumber": "+123456789",
+  "role": "User"
+}
+
+---
+
+### Update an existing user
+
+- Method: PUT  
+- URL: https://localhost:5176/api/users/{user-id}  
+- Headers: Content-Type: application/json  
+- Body (raw JSON):
+
+{
+  "id": "the-user-guid-here",
+  "name": "Alice S. Updated",
+  "email": "alice.updated@example.com",
+  "age": 29,
+  "phoneNumber": "+123456789",
+  "role": "User"
+}
+
+---
+
+### Delete a user
+
+- Method: DELETE  
+- URL: https://localhost:5176/api/users/{user-id}
+
+---
+
+## Seeding Data
+
+On first run, the app seeds 10 fake users into the in-memory database using Bogus.
+
+---
+
+## Customization
+
+- To use a persistent database (e.g., SQL Server), update `ApplicationDbContext` registration in Program.cs
+- Add real authentication/authorization logic to secure endpoints
+- Enhance validation attributes in the User model as needed
+
+---
+
+## Notes
+
+- This is a demo project, so data is lost on application restart (in-memory DB)
+- Use HTTPS to avoid mixed content issues
+- Swagger UI is enabled only in Development environment at `/swagger`
+

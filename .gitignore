@@ -1,0 +1,89 @@
+# Build artifacts
+bin/
+obj/
+out/
+artifacts/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rider IDE
+.idea/
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.dbmdl
+
+# ASP.NET Secrets
+secrets.json
+
+# Logs
+*.log
+
+# Package management
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Others
+*.bak
+*.tmp
+*.cache
+*.config.user
+
+# Entity Framework Migrations snapshots (optional, remove if you want to keep)
+*MigrationsSnapshot.cs
+
+# dotCover
+*.dotCover
+
+# Test results
+TestResults/
+
+# Local NuGet packages
+.nuget/
+
+# NCrunch
+*.ncrunch*
+*.nunit.xml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Coverage reports
+coverage/
+coverage*.json
+lcov.info
+
+# node_modules (if using JS/TS frontend)
+node_modules/
+
+# dist or build output (if using frontend frameworks)
+dist/
+build/
+
+# Publish output
+publish/
+wwwroot/
+
+# JetBrains Rider
+.idea/
+
+# Temporary files
+*.swp
+*.lock.json
+
+# dotnet watch browser reload cache
+**/.vs/slnx.sqlite
