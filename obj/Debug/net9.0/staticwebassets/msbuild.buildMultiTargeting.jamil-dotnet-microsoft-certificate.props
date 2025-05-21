@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/jamil-dotnet-microsoft-certificate.props" />
-</Project>
