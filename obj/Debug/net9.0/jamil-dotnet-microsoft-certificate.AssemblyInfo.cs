@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("jamil-dotnet-microsoft-certificate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6246036f8b64ed9c1cea196084b47994a40e788f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7026c11c036e0d96f5c59c1cb3a7a25e91ccdc2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("jamil-dotnet-microsoft-certificate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("jamil-dotnet-microsoft-certificate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

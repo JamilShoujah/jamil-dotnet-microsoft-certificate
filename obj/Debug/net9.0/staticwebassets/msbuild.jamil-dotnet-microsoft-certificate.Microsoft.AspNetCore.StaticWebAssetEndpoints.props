@@ -28,13 +28,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jamil-dotnet-microsoft-certificate.i3mw0z5i7q.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-3nP25t/lFIteZCWPjzcOKFJEoqClF2Oto09paAGM5Ok="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1103"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00223nP25t/lFIteZCWPjzcOKFJEoqClF2Oto09paAGM5Ok=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 12:09:01 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1103"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00223nP25t/lFIteZCWPjzcOKFJEoqClF2Oto09paAGM5Ok=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 13:47:11 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/jamil-dotnet-microsoft-certificate/jamil-dotnet-microsoft-certificate.i3mw0z5i7q.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jamil-dotnet-microsoft-certificate.i3mw0z5i7q.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i3mw0z5i7q"},{"Name":"integrity","Value":"sha256-3nP25t/lFIteZCWPjzcOKFJEoqClF2Oto09paAGM5Ok="},{"Name":"label","Value":"_content/jamil-dotnet-microsoft-certificate/jamil-dotnet-microsoft-certificate.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1103"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00223nP25t/lFIteZCWPjzcOKFJEoqClF2Oto09paAGM5Ok=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 12:09:01 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1103"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00223nP25t/lFIteZCWPjzcOKFJEoqClF2Oto09paAGM5Ok=\u0022"},{"Name":"Last-Modified","Value":"Wed, 21 May 2025 13:47:11 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/jamil-dotnet-microsoft-certificate/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

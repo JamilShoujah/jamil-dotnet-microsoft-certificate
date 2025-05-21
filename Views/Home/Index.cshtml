@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome to the User Management API";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div style="font-family: sans-serif; max-width: 800px; margin: auto; padding-top: 40px;">
+    <h1>User Management API</h1>
+    <p>This project is an <strong>API-only application</strong>. To interact with it, please use <a href="https://www.postman.com/" target="_blank">Postman</a> or a similar REST client.</p>
+
+    <h2>📌 Example: Create a User</h2>
+    <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px;">
+POST https://localhost:5176/api/users
+Content-Type: application/json
+
+{
+  "name": "Alice Smith",
+  "email": "alice.smith@example.com",
+  "age": 28,
+  "phoneNumber": "+123456789",
+  "role": "User"
+}
+    </pre>
+
+    <h2>🔗 Swagger UI</h2>
+    <p>You can also test endpoints interactively at <a href="/swagger" target="_blank">/swagger</a>.</p>
+
+    <hr>
+    <p>For complete documentation, see the project README or your Postman collection.</p>
 </div>
